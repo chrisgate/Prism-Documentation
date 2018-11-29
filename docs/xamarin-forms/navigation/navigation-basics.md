@@ -149,7 +149,7 @@ _navigationService.GoBackAsync();
 
 ### Forcing a Modal or Non-Modal Navigation
 
-The Prism navigation service tries it's best to understand the intent of the navigation operation and perform the appropriate modal/non-modal navigation. However, sometimes you require full contol over whether or not you perform a modal or non-moda navigation.  To tell the Prism navigation service how to handle the navigation request, set the `useModalNavigation` parameter in the `INavigationService.NavigateAsync` method signature.
+The Prism navigation service tries it's best to understand the intent of the navigation operation and perform the appropriate modal/non-modal navigation. However, sometimes you require full control over whether or not you perform a modal or non-moda navigation.  To tell the Prism navigation service how to handle the navigation request, set the `useModalNavigation` parameter in the `INavigationService.NavigateAsync` method signature.
 
 For example; if your navigation stack is rooted within a NavigationPage such as "NavigationPage/ViewA/ViewB", then you call `_navigationService.NavigateAsync("ViewC")` from ViewB, ViewC will be pushed onto the NavigationPage's nav stack and your new navigation stack will look like "NavigationPage/ViewA/ViewB/ViewC".  If you do not want this behavior, and instead wish to force ViewC to be navigated to modally, you must set the `useModalNavigation` parameter to `true`.
 
